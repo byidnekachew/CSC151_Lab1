@@ -1,6 +1,6 @@
 /*
- * Name: 
- * Purpose: 
+ * Name: Ticket Pricer
+ * Purpose: Calculates the price of a ticket for 3 customers as well their subtotal and total following processing fee.
  * Programmer: Biruk Yidnekachew
  * Date: 8 September 2025
  */
@@ -13,7 +13,7 @@ public class Yidnekachew_Lab1 {
         // Declares Scanner object
         Scanner keyboard = new Scanner(System.in);
       
-        // Declares variable which will contain user input of letter
+        // Declares variables which will contain user input of name and age as well as future ticket charge
         String customer1Name;
         int customer1Age;
         double customer1Charge;
@@ -24,7 +24,7 @@ public class Yidnekachew_Lab1 {
         int customer3Age;
         double customer3Charge;
         
-        // Assigns value to letter variable based on user input
+        // Assigns value to name and age variables based on input
             System.out.print("Enter customer 1's last name: ");
             customer1Name = keyboard.next();
             System.out.print("Enter Mx." + customer1Name + "'s age: ");
@@ -38,7 +38,7 @@ public class Yidnekachew_Lab1 {
             System.out.print("Enter Mx." + customer3Name + "'s age: ");
             customer3Age = keyboard.nextInt();
 
-        // CoMmEnT
+        // Conditional chains to determine the price of ticket for each customer as well as return their inf0 + price
         System.out.print("\n\nCustomer 1 Last Name: " + customer1Name + "\nCustomer 1 Age: " + customer1Age);
         if (customer1Age >= 0 && customer1Age <= 5){
             customer1Charge = 0;
@@ -91,7 +91,7 @@ public class Yidnekachew_Lab1 {
             System.out.print("\nCustomer 3 Ticket Price: $6");
         }
 
-        // CoMeNt
+        // Performs calculations for subtotal and final total following processing fee and returns info to user
         System.out.print("\n\n\n---Calculations---\n");
         System.out.printf("Subtotal: $%.2f\nTotal Charge: $%.2f",(customer1Charge + customer2Charge + customer3Charge), ((customer1Charge + customer2Charge + customer3Charge) * 1.05));
     }
